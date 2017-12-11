@@ -47,13 +47,11 @@ class Simon
   def require_sequence
     # should repeat sequence
     # if repeats a wrong color, should immediately return game over
-    count = 0
-    until game_over || count == seq.length
-      if wrong color
+    @seq.each do |color|
+      user_color = gets.chomp
+      if color[0] != user_color
         @game_over = true
         raise "wrong color"
-      else
-        count += 1
       end
     end
   end
