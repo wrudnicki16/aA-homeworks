@@ -1,0 +1,49 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  border-bottom: 3px solid $lightest-gray
+}
+
+.left-nav > ul,
+.right-nav > ul {
+  display: flex;
+  align-items: center;
+}
+
+.left-nav > ul > li {
+  text-transform: uppercase;
+  font-family: "nyt-franklin",arial,helvetica,sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 7px 10px 6px;
+  border-radius: 3px;
+  margin-right: 5px;
+  transition: background-color 0.3s;
+}
+
+.right-nav > ul > li {
+  text-transform: uppercase;
+  font-family: "nyt-franklin",arial,helvetica,sans-serif;
+  font-size: 700;
+  margin-right: 5px;
+}
+
+.right-nav > ul > li:last-of-type {
+  padding: 7px 10px 6px;
+  border-radius: 3px;
+}
+
+.left-nav > ul > li:hover,
+.right-nav > ul > li:last-of-type:hover {
+  background-color: $lightest-gray;
+}
+
+.left-nav span {
+  margin: 10px;
+}
+
+
+.right-nav i {
+  font-size: 1.25em;
+}
