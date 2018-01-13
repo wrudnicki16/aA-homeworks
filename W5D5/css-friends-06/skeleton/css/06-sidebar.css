@@ -1,0 +1,9 @@
+/* PHASE 6: Sidebar */
+.profile-picture a {
+  position: relative;
+  display: block;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-top: -100px;
+  float: left;
+}
