@@ -1,0 +1,36 @@
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<ul class="cool-things">
+  <li>Racecars</li>
+  <li>Lasers</li>
+  <li>Aeroplanes</li>
+</ul>
+
+<form id="cool-thing-form">
+  <label>
+    Cool Thing
+    <input type="text" id="cool_thing">
+  </label>
+
+  <input type="submit" value="Create Cool Thing">
+</form>
+
+<script>
+  const $form = $("#cool-thing-form");
+  $form.on("submit", event => {
+    event.preventDefault();
+
+    const $input = $("#cool_thing");
+    const coolThing = $input.val();
+    $input.val("");
+
+    $("ul.cool-things").append($("<li></li>").text(coolThing));
+  });
+
+  const $listItems = $("li");
+  $listItems.on("mouseover", event => {
+    const currentTarget = event.currentTarget;
+    const $currentTarget = $(currentTarget);
+    alert($currentTarget.text());
+  });
+  </script>

@@ -1,0 +1,43 @@
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<ul class="cool-things">
+  <li>Racecars</li>
+  <li>Lasers</li>
+  <li>Aeroplanes</li>
+
+  <div>What is a div doing inside here?? I don't alert when you hover.</div>
+</ul>
+
+<form id="cool-thing-form">
+  <label>
+    Cool Thing
+    <input type="text" id="cool_thing">
+  </label>
+
+  <input type="submit" value="Create Cool Thing">
+</form>
+
+<script>
+  const $form = $("#cool-thing-form");
+  $form.on("submit", event => {
+    event.preventDefault();
+
+    const $input = $("#cool_thing");
+    const coolThing = $input.val();
+    $input.val("");
+
+    const $li = $("<li></li>").text(coolThing);
+    $("ul.cool-things").append($li);
+  });
+
+  $("ul.cool-things").on("mouseover", event => {
+    // currentTarget is the thing the event handler is installed on.
+    const $ul = $(event.currentTarget);
+
+    // target is the thing that the event happened to. This line sees
+    // if the thing we mousedover is an `li` in the `$ul`.
+    if ($ul.find("li").is(event.target)) {
+      alert($(event.target).text());
+    };
+  });
+</script>
