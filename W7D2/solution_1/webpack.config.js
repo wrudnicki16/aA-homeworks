@@ -1,17 +1,17 @@
-var path = require('path');
+const path = require("path");
 
 module.exports = {
   context: __dirname,
-  entry: "./index.jsx",
+  entry: './frontend/todo_redux.jsx',
   output: {
     path: path.resolve(__dirname),
-    filename: "bundle.js"
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
       {
-        test: [/\.jsx?$/, /\.js?$/],
-        exclude: /(node_modules)/,
+        test: [/\.jsx?$/],
+        exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
           presets: ['env', 'react']
@@ -21,6 +21,6 @@ module.exports = {
   },
   devtool: 'source-map',
   resolve: {
-    extensions: [".js", ".jsx", "*"]
+    extensions: ['.js', '.jsx', '*']
   }
 };

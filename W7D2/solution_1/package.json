@@ -1,11 +1,14 @@
 {
-  "name": "solution",
+  "name": "todos",
   "version": "1.0.0",
-  "description": "This homework covers configuration of a new React project. Download the skeleton [here][skeleton].",
-  "main": "index.jsx",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --watch"
+    "start": "webpack --watch"
   },
   "keywords": [],
   "author": "",
@@ -15,8 +18,11 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "lodash": "^4.17.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
     "webpack": "^3.10.0"
   }
 }
